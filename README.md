@@ -19,7 +19,7 @@
 ## 如何准备
 
 1. 抓取![clone](./clone.png?raw=true)此仓库，关于git使用，请参考[git-tutorial](https://github.com/cs-course/git-tutorial)
-2. 进入仓库文件夹，建立**以学号命名**的文件夹，在里面创建作业文件，其中：PPT文件命名为*presentation.(ppt|pptx|pdf)*，综述报告命名为*survey.(doc|docx|pdf)*
+2. 进入仓库文件夹，建立**以学号命名**的文件夹，在里面创建作业文件，其中：**研讨胶片**命名为*presentation.(ppt|pptx|pdf)*，**综述报告**命名为*survey.(doc|docx|pdf)*，**实验报告**命名为*lab.(doc|docx|pdf)*
 
 往届作业参考：<https://github.com/cs-course/data-center-course-assignment-2020>
 
