@@ -11,13 +11,13 @@
     - Session Chair 组织得力可加分
 - **综述报告** *40%*
   - 围绕自选研讨主题综述不少于3篇近3年CCF-A/B类会议、期刊论文
-  - [**在线填报**](https://docs.qq.com/form/page/DREZhYWV1Q3hPbG1n?_w_tencentdocx_form=1)
-    - 注意腾讯收集表提交时限和各栏字数要求
+    - [**在线填报**](https://docs.qq.com/form/page/DREZhYWV1Q3hPbG1n?_w_tencentdocx_form=1)，注意腾讯收集表提交时限和各栏字数要求
     - 内容按计算机学报样式([Doc](http://cjc.ict.ac.cn/wltg/new/submit/CJC-Templet_Word2003.doc), [LaTeX](http://cjc.ict.ac.cn/wltg/new/submit/LatexTemplet.zip))排版后上传仓库文件夹
     - 打印纸质版（A4）
 - **实验报告** *20%*
-  - 实验报告、实验代码上传仓库文件夹
+  - 围绕课程[第三讲：对象存储技术](https://shi_zhan.gitlab.io/data-center-course/data-center-2021-obs)主题，按照[实验说明](https://shi_zhan.gitlab.io/data-center-course/data-center-2021-obs#67)进行实验，编纂实验报告
     - 注意每人实验环境各不一样，数据势必有别
+    - 实验报告、实验代码上传仓库文件夹
 
 ## 如何准备
 
