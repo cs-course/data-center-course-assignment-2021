@@ -10,11 +10,14 @@
     - 每位 Presenter 有 7 分钟汇报和 1 至 2 分钟讨论，由 Session Chair 严格组织并计时
     - Session Chair 组织得力可加分
 - **综述报告** *40%*
-  - 围绕一项主题综述不少于3篇近3年CCF-A/B类会议、期刊论文
-  - **暂定** [在线填报](https://docs.qq.com/form/page/DREZhYWV1Q3hPbG1n?_w_tencentdocx_form=1
-)，纸质版（A4）
+  - 围绕自选研讨主题综述不少于3篇近3年CCF-A/B类会议、期刊论文
+  - [**在线填报**](https://docs.qq.com/form/page/DREZhYWV1Q3hPbG1n?_w_tencentdocx_form=1)
+    - 注意腾讯收集表提交时限和各栏字数要求
+    - 内容按计算机学报样式([Doc](http://cjc.ict.ac.cn/wltg/new/submit/CJC-Templet_Word2003.doc), [LaTeX](http://cjc.ict.ac.cn/wltg/new/submit/LatexTemplet.zip))排版后上传仓库文件夹
+    - 打印纸质版（A4）
 - **实验报告** *20%*
-  - 提交实验报告、实验代码，注意每人实验环境各不一样，数据势必有别
+  - 实验报告、实验代码上传仓库文件夹
+    - 注意每人实验环境各不一样，数据势必有别
 
 ## 如何准备
 
