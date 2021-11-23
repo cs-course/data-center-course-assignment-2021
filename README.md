@@ -5,8 +5,8 @@
 ## 作业内容及要求
 
 - **论文研讨** *40%*
-  - 制作胶片汇报一篇相关论文，**模拟学术会议**
-    - 第一次课内完成 [Schedule](https://docs.qq.com/doc/DRG1CZFZmaFRRYkJj)，确认 16 个 Session Chair 和 78 篇 Paper
+  - 制作胶片汇报一篇相关论文，模拟学术会议
+    - 第一次课内完成[**选读论文安排**](https://docs.qq.com/doc/DRG1CZFZmaFRRYkJj)，确认 16 个 Session Chair 和 78 篇 Paper
     - 每位 Presenter 有 7 分钟汇报和 1 至 2 分钟讨论，由 Session Chair 严格组织并计时
     - Session Chair 组织得力可加分
 - **综述报告** *40%*
@@ -23,6 +23,7 @@
 
 1. 抓取![clone](./clone.png?raw=true)此仓库，关于git使用，请参考[git-tutorial](https://github.com/cs-course/git-tutorial)
 2. 进入仓库文件夹，建立**以学号命名**的文件夹，在里面创建作业文件，其中：**研讨胶片**命名为*presentation.(ppt|pptx|pdf)*，**综述报告**命名为*survey.(doc|docx|pdf)*，**实验报告**命名为*lab.(doc|docx|pdf)*
+3. 综述报告还需在线填报
 
 往届作业参考：<https://github.com/cs-course/data-center-course-assignment-2020>
 
