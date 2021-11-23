@@ -6,7 +6,7 @@
 
 - **论文研讨** *40%*
   - 制作胶片汇报一篇相关论文，**模拟学术会议**
-    - 第一次课内完成 Schedule，确认 16 个 Session Chair 和 78 篇 Paper
+    - 第一次课内完成 [Schedule](https://docs.qq.com/doc/DRG1CZFZmaFRRYkJj)，确认 16 个 Session Chair 和 78 篇 Paper
     - 每位 Presenter 有 7 分钟汇报和 1 至 2 分钟讨论，由 Session Chair 严格组织并计时
     - Session Chair 组织得力可加分
 - **综述报告** *40%*
