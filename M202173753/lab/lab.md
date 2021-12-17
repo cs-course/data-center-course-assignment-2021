@@ -67,8 +67,8 @@ s3bench \
   | --------- | ------------ | ------------ | ------------ |
   | Size (KB) | 256,512,1024 | 256,512,1024 | 256,512,1024 |
 
-  - ***<u>Write</u>***![image-20211217162115112](/Users/liaoyujian/Library/Application Support/typora-user-images/image-20211217162115112.png)
-  - ***<u>READ</u>***![image-20211217162040452](/Users/liaoyujian/Library/Application Support/typora-user-images/image-20211217162040452.png)
+  - ***<u>Write</u>***![image-20211217192644617](/Users/liaoyujian/Library/Application Support/typora-user-images/image-20211217192644617.png)
+  - ***<u>READ</u>***![image-20211217192746431](/Users/liaoyujian/Library/Application Support/typora-user-images/image-20211217192746431.png)
 
   > 分析Write和Read曲线，大体上，线程越多，对象的大小越大，尾延迟现象越明显
 
