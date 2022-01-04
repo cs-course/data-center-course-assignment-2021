@@ -1,7 +1,7 @@
 姓名：李贽
 学号：M202173723
 
-研讨胶片命名为presentation.(pptx/pdf)，综述报告命名为survey.pdf，实验报告命名为lab.pdf，实验代码命名为code.rar
+研讨胶片命名为presentation.pdf，综述报告命名为survey.pdf，实验报告命名为lab.pdf，实验代码命名为code.rar
 
 综述报告涉及的三篇论文分别为：
 论文标题 | 会议名称 | 年份 |
