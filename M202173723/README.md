@@ -14,3 +14,9 @@ experiment文件内含实验代码，数据中心实验报告为对应实验报�
 
 《On the Feasibility of Parser-based Log Compression in Large-Scale Cloud Systems》
 来自19th {USENIX} Conference on File and Storage Technologies ({FAST} 21). 2021
+
+论文标题 | 会议名称 | 年份 |
+:-----:|:-----:|:-----:|
+On the Feasibility of Parser-based Log Compression in Large-Scale Cloud Systems | USENIX | 2021 |
+Logzip: extracting hidden structures via iterative clustering for log compression | ASE | 2019 |
+Tools and benchmarks for automated log parsing  | ICSE-SEIP | 2019 |、
