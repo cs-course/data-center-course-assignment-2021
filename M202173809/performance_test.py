@@ -13,15 +13,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import botocore
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 import numpy as np
-from numpy.lib.function_base import quantile
 import pandas as pd
-from pandas.io.formats.format import format_array
 import throttle
-from boto3 import Session, session
+from boto3 import Session
 from matplotlib.ticker import FuncFormatter
 from tqdm import tqdm
+import asyncio
 
 default_access_id = 'admin'
 default_access_key = 'chenliwei'
@@ -92,6 +90,40 @@ class PerformanceTester(object):
     def arrival_rate_8(self, s3_res, i, suffix=''):
         return self.request_timing(s3_res, i, suffix)
 
+    async def hedged_request(self, s3_res, i, suffix=''):
+        '''
+        模拟对冲请求，使用asyncio
+
+        发送的请求如果在限定延迟后还未到达，立即发送第二个请求
+        接收到任意一个请求的返回值后，取消其他请求
+
+        Return
+        ------
+        latency (float) : 小于给定阈值的延迟，单位ms
+        '''
+        obj_name = "testObj%08d%s" % (i, suffix, )
+        latency = 0
+
+        async def write_object():
+            start = time.time()
+            s3_res.Object(self.test_bucket_name, obj_name).upload_file(self.test_file)
+            end = time.time()
+            return (end - start) * 1000
+
+        # 如果超时则再发一次请求，直到某次请求的延迟小于timeout即可
+        while latency == 0:
+            try:
+                # 超时时间设置为200ms，超时后自动取消
+                latency = await asyncio.wait_for(write_object(), timeout=0.2)
+            except asyncio.TimeoutError as timeout:
+                print("[INFO] Time out!Submitting a new hedged request...")
+                continue
+
+        return latency
+            
+    def wrapper_coroutine_run(self, coroutine):
+        return asyncio.run(coroutine)
+
     @staticmethod
     def get_quantile_num(latency, percentile):
         '''
@@ -100,10 +132,27 @@ class PerformanceTester(object):
         df = pd.DataFrame(latency, columns=['latency'])
         return df.quantile(percentile).iloc[0]
 
-    def latency_collect(self, object_num=100, object_size=4, workers=1):
+    def latency_collect(self, object_num=100, object_size=4, workers=1, request_func=None):
+        '''
+        收集延迟
+
+        Params
+        ------
+        object_num (int) : 写入对象个数
+        object_size (int) : 每个对象的尺寸
+        workers (int) : 并发数
+        request_func (function object) : 采用的请求函数，默认为arrival_rate_max，不对请求作限制
+        '''
         # 打印参数
         print("********************************************\n[INFO] Begin a new round of performance test")
         print("[Test Params]\n对象个数: {}\n对象尺寸: {}\n并发数: {}".format(object_num, object_size, workers))
+        
+        # 绑定要使用的写请求函数，如果默认使用arrival_rate_max会因其未绑定实际对象而不能执行
+        # 注意，传入的request_func如果不是None, 通常都是用instance.func作为已绑定类实例的函数对象传入
+        if request_func is None:
+            request_func = self.arrival_rate_max
+        print("[Using Request Function] %s" % (request_func.__name__))
+
         # 初始化测试用数据文件
         self.test_file = "_test_%dK.bin" % object_size
         # 填充数据文件至对应大小
@@ -126,21 +175,30 @@ class PerformanceTester(object):
 
         with tqdm(desc="Accessing S3 at %s" % self.s3_endpoint, total=object_num) as pbar:
             with ThreadPoolExecutor(max_workers=workers) as executor:   # 设置并发线程数
-                futures = [
-                    executor.submit(
-                        self.arrival_rate_max,
-                        self.session.resource('s3', endpoint_url=self.s3_endpoint),
-                        i,
-                        suffix
-                    ) for i in range(object_num)
-                ]
-
-                for future in as_completed(futures):
-                    if future.exception():
-                        failed_requests.append(future)
-                    else:   # 正常执行的请求，采集其延迟
-                        latency.append(future.result())
-                    pbar.update(1)
+                if request_func != self.hedged_request:
+                    futures = [
+                        executor.submit(
+                            request_func,
+                            self.session.resource('s3', endpoint_url=self.s3_endpoint),
+                            i,
+                            suffix
+                        ) for i in range(object_num)
+                    ]
+                    for future in as_completed(futures):
+                        if future.exception():
+                            failed_requests.append(future)
+                        else:   # 正常执行的请求，采集其延迟
+                            latency.append(future.result())
+                        pbar.update(1)
+                else:
+                    # 模拟对冲请求，由于被async修饰的hedged_request()函数只是个尚未执行的协程，使用wrapper包装一个asyncio.run()函数
+                    # 交付ThreadPoolExecutor使用map执行每一个协程
+                    coros = [request_func(self.session.resource('s3', endpoint_url=self.s3_endpoint),
+                            i,
+                            suffix) for i in range(object_num)]
+                    for r_latency in executor.map(self.wrapper_coroutine_run, coros):
+                        latency.append(r_latency)
+                        pbar.update(1)
 
         try:
             test_bucket.objects.filter().delete()   # 删除测试桶内所有对象
@@ -277,4 +335,11 @@ if __name__ == "__main__":
     tester.latency_plot(latency_file)
 
     # 测试对象尺寸对延迟的影响
-    tester.latency_compare(init_size=1, step=2, rounds=10, object_num=256, workers=8)
+    # tester.latency_compare(init_size=1, step=2, rounds=10, object_num=256, workers=8)
+
+    # 模拟对冲请求
+    hedged_latency_file, _, _ = tester.latency_collect(object_num=256,
+                                                object_size=32,
+                                                workers=8,
+                                                request_func=tester.hedged_request)
+    tester.latency_plot(hedged_latency_file)
