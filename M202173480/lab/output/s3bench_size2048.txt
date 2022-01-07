@@ -1,0 +1,161 @@
+Test parameters
+endpoint(s):      [http://192.168.123.125:9000]
+bucket:           loadgen
+objectNamePrefix: loadgen
+objectSize:       0.0020 MB
+numClients:       2
+numSamples:       102400
+verbose:       %!d(bool=false)
+
+
+Generating in-memory sample data... Done (22.49µs)
+
+Running Write test...
+
+Running Read test...
+
+Test parameters
+endpoint(s):      [http://192.168.123.125:9000]
+bucket:           loadgen
+objectNamePrefix: loadgen
+objectSize:       0.0020 MB
+numClients:       2
+numSamples:       102400
+verbose:       %!d(bool=false)
+
+
+Results Summary for Write Operation(s)
+Total Transferred: 200.000 MB
+Total Throughput:  1.52 MB/s
+Total Duration:    131.553 s
+Number of Errors:  0
+------------------------------------
+Write times Max:       0.275 s
+Write times 99th %ile: 0.009 s
+Write times 90th %ile: 0.003 s
+Write times 75th %ile: 0.003 s
+Write times 50th %ile: 0.002 s
+Write times 25th %ile: 0.002 s
+Write times Min:       0.001 s
+
+
+Results Summary for Read Operation(s)
+Total Transferred: 200.000 MB
+Total Throughput:  4.30 MB/s
+Total Duration:    46.525 s
+Number of Errors:  0
+------------------------------------
+Read times Max:       0.087 s
+Read times 99th %ile: 0.002 s
+Read times 90th %ile: 0.001 s
+Read times 75th %ile: 0.001 s
+Read times 50th %ile: 0.001 s
+Read times 25th %ile: 0.001 s
+Read times Min:       0.001 s
+
+
+Cleaning up 102400 objects...
+Deleting a batch of 1000 objects in range {0, 999}... Succeeded
+Deleting a batch of 1000 objects in range {1000, 1999}... Succeeded
+Deleting a batch of 1000 objects in range {2000, 2999}... Succeeded
+Deleting a batch of 1000 objects in range {3000, 3999}... Succeeded
+Deleting a batch of 1000 objects in range {4000, 4999}... Succeeded
+Deleting a batch of 1000 objects in range {5000, 5999}... Succeeded
+Deleting a batch of 1000 objects in range {6000, 6999}... Succeeded
+Deleting a batch of 1000 objects in range {7000, 7999}... Succeeded
+Deleting a batch of 1000 objects in range {8000, 8999}... Succeeded
+Deleting a batch of 1000 objects in range {9000, 9999}... Succeeded
+Deleting a batch of 1000 objects in range {10000, 10999}... Succeeded
+Deleting a batch of 1000 objects in range {11000, 11999}... Succeeded
+Deleting a batch of 1000 objects in range {12000, 12999}... Succeeded
+Deleting a batch of 1000 objects in range {13000, 13999}... Succeeded
+Deleting a batch of 1000 objects in range {14000, 14999}... Succeeded
+Deleting a batch of 1000 objects in range {15000, 15999}... Succeeded
+Deleting a batch of 1000 objects in range {16000, 16999}... Succeeded
+Deleting a batch of 1000 objects in range {17000, 17999}... Succeeded
+Deleting a batch of 1000 objects in range {18000, 18999}... Succeeded
+Deleting a batch of 1000 objects in range {19000, 19999}... Succeeded
+Deleting a batch of 1000 objects in range {20000, 20999}... Succeeded
+Deleting a batch of 1000 objects in range {21000, 21999}... Succeeded
+Deleting a batch of 1000 objects in range {22000, 22999}... Succeeded
+Deleting a batch of 1000 objects in range {23000, 23999}... Succeeded
+Deleting a batch of 1000 objects in range {24000, 24999}... Succeeded
+Deleting a batch of 1000 objects in range {25000, 25999}... Succeeded
+Deleting a batch of 1000 objects in range {26000, 26999}... Succeeded
+Deleting a batch of 1000 objects in range {27000, 27999}... Succeeded
+Deleting a batch of 1000 objects in range {28000, 28999}... Succeeded
+Deleting a batch of 1000 objects in range {29000, 29999}... Succeeded
+Deleting a batch of 1000 objects in range {30000, 30999}... Succeeded
+Deleting a batch of 1000 objects in range {31000, 31999}... Succeeded
+Deleting a batch of 1000 objects in range {32000, 32999}... Succeeded
+Deleting a batch of 1000 objects in range {33000, 33999}... Succeeded
+Deleting a batch of 1000 objects in range {34000, 34999}... Succeeded
+Deleting a batch of 1000 objects in range {35000, 35999}... Succeeded
+Deleting a batch of 1000 objects in range {36000, 36999}... Succeeded
+Deleting a batch of 1000 objects in range {37000, 37999}... Succeeded
+Deleting a batch of 1000 objects in range {38000, 38999}... Succeeded
+Deleting a batch of 1000 objects in range {39000, 39999}... Succeeded
+Deleting a batch of 1000 objects in range {40000, 40999}... Succeeded
+Deleting a batch of 1000 objects in range {41000, 41999}... Succeeded
+Deleting a batch of 1000 objects in range {42000, 42999}... Succeeded
+Deleting a batch of 1000 objects in range {43000, 43999}... Succeeded
+Deleting a batch of 1000 objects in range {44000, 44999}... Succeeded
+Deleting a batch of 1000 objects in range {45000, 45999}... Succeeded
+Deleting a batch of 1000 objects in range {46000, 46999}... Succeeded
+Deleting a batch of 1000 objects in range {47000, 47999}... Succeeded
+Deleting a batch of 1000 objects in range {48000, 48999}... Succeeded
+Deleting a batch of 1000 objects in range {49000, 49999}... Succeeded
+Deleting a batch of 1000 objects in range {50000, 50999}... Succeeded
+Deleting a batch of 1000 objects in range {51000, 51999}... Succeeded
+Deleting a batch of 1000 objects in range {52000, 52999}... Succeeded
+Deleting a batch of 1000 objects in range {53000, 53999}... Succeeded
+Deleting a batch of 1000 objects in range {54000, 54999}... Succeeded
+Deleting a batch of 1000 objects in range {55000, 55999}... Succeeded
+Deleting a batch of 1000 objects in range {56000, 56999}... Succeeded
+Deleting a batch of 1000 objects in range {57000, 57999}... Succeeded
+Deleting a batch of 1000 objects in range {58000, 58999}... Succeeded
+Deleting a batch of 1000 objects in range {59000, 59999}... Succeeded
+Deleting a batch of 1000 objects in range {60000, 60999}... Succeeded
+Deleting a batch of 1000 objects in range {61000, 61999}... Succeeded
+Deleting a batch of 1000 objects in range {62000, 62999}... Succeeded
+Deleting a batch of 1000 objects in range {63000, 63999}... Succeeded
+Deleting a batch of 1000 objects in range {64000, 64999}... Succeeded
+Deleting a batch of 1000 objects in range {65000, 65999}... Succeeded
+Deleting a batch of 1000 objects in range {66000, 66999}... Succeeded
+Deleting a batch of 1000 objects in range {67000, 67999}... Succeeded
+Deleting a batch of 1000 objects in range {68000, 68999}... Succeeded
+Deleting a batch of 1000 objects in range {69000, 69999}... Succeeded
+Deleting a batch of 1000 objects in range {70000, 70999}... Succeeded
+Deleting a batch of 1000 objects in range {71000, 71999}... Succeeded
+Deleting a batch of 1000 objects in range {72000, 72999}... Succeeded
+Deleting a batch of 1000 objects in range {73000, 73999}... Succeeded
+Deleting a batch of 1000 objects in range {74000, 74999}... Succeeded
+Deleting a batch of 1000 objects in range {75000, 75999}... Succeeded
+Deleting a batch of 1000 objects in range {76000, 76999}... Succeeded
+Deleting a batch of 1000 objects in range {77000, 77999}... Succeeded
+Deleting a batch of 1000 objects in range {78000, 78999}... Succeeded
+Deleting a batch of 1000 objects in range {79000, 79999}... Succeeded
+Deleting a batch of 1000 objects in range {80000, 80999}... Succeeded
+Deleting a batch of 1000 objects in range {81000, 81999}... Succeeded
+Deleting a batch of 1000 objects in range {82000, 82999}... Succeeded
+Deleting a batch of 1000 objects in range {83000, 83999}... Succeeded
+Deleting a batch of 1000 objects in range {84000, 84999}... Succeeded
+Deleting a batch of 1000 objects in range {85000, 85999}... Succeeded
+Deleting a batch of 1000 objects in range {86000, 86999}... Succeeded
+Deleting a batch of 1000 objects in range {87000, 87999}... Succeeded
+Deleting a batch of 1000 objects in range {88000, 88999}... Succeeded
+Deleting a batch of 1000 objects in range {89000, 89999}... Succeeded
+Deleting a batch of 1000 objects in range {90000, 90999}... Succeeded
+Deleting a batch of 1000 objects in range {91000, 91999}... Succeeded
+Deleting a batch of 1000 objects in range {92000, 92999}... Succeeded
+Deleting a batch of 1000 objects in range {93000, 93999}... Succeeded
+Deleting a batch of 1000 objects in range {94000, 94999}... Succeeded
+Deleting a batch of 1000 objects in range {95000, 95999}... Succeeded
+Deleting a batch of 1000 objects in range {96000, 96999}... Succeeded
+Deleting a batch of 1000 objects in range {97000, 97999}... Succeeded
+Deleting a batch of 1000 objects in range {98000, 98999}... Succeeded
+Deleting a batch of 1000 objects in range {99000, 99999}... Succeeded
+Deleting a batch of 1000 objects in range {100000, 100999}... Succeeded
+Deleting a batch of 1000 objects in range {101000, 101999}... Succeeded
+Deleting a batch of 400 objects in range {102000, 102399}... Succeeded
+Successfully deleted 102400/102400 objects in 14.734456833s
