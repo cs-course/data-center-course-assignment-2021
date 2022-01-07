@@ -1,0 +1,69 @@
+Test parameters
+endpoint(s):      [http://192.168.123.125:9000]
+bucket:           loadgen
+objectNamePrefix: loadgen
+objectSize:       0.1250 MB
+numClients:       32
+numSamples:       10240
+verbose:       %!d(bool=false)
+
+
+Generating in-memory sample data... Done (1.237418ms)
+
+Running Write test...
+
+Running Read test...
+
+Test parameters
+endpoint(s):      [http://192.168.123.125:9000]
+bucket:           loadgen
+objectNamePrefix: loadgen
+objectSize:       0.1250 MB
+numClients:       32
+numSamples:       10240
+verbose:       %!d(bool=false)
+
+
+Results Summary for Write Operation(s)
+Total Transferred: 1280.000 MB
+Total Throughput:  356.43 MB/s
+Total Duration:    3.591 s
+Number of Errors:  0
+------------------------------------
+Write times Max:       0.140 s
+Write times 99th %ile: 0.026 s
+Write times 90th %ile: 0.016 s
+Write times 75th %ile: 0.013 s
+Write times 50th %ile: 0.010 s
+Write times 25th %ile: 0.007 s
+Write times Min:       0.002 s
+
+
+Results Summary for Read Operation(s)
+Total Transferred: 1277.250 MB
+Total Throughput:  149.79 MB/s
+Total Duration:    8.527 s
+Number of Errors:  22
+------------------------------------
+Read times Max:       0.500 s
+Read times 99th %ile: 0.215 s
+Read times 90th %ile: 0.073 s
+Read times 75th %ile: 0.021 s
+Read times 50th %ile: 0.010 s
+Read times 25th %ile: 0.005 s
+Read times Min:       0.001 s
+
+
+Cleaning up 10240 objects...
+Deleting a batch of 1000 objects in range {0, 999}... Succeeded
+Deleting a batch of 1000 objects in range {1000, 1999}... Succeeded
+Deleting a batch of 1000 objects in range {2000, 2999}... Succeeded
+Deleting a batch of 1000 objects in range {3000, 3999}... Succeeded
+Deleting a batch of 1000 objects in range {4000, 4999}... Succeeded
+Deleting a batch of 1000 objects in range {5000, 5999}... Succeeded
+Deleting a batch of 1000 objects in range {6000, 6999}... Succeeded
+Deleting a batch of 1000 objects in range {7000, 7999}... Succeeded
+Deleting a batch of 1000 objects in range {8000, 8999}... Succeeded
+Deleting a batch of 1000 objects in range {9000, 9999}... Succeeded
+Deleting a batch of 240 objects in range {10000, 10239}... Succeeded
+Successfully deleted 10240/10240 objects in 1.689572249s
