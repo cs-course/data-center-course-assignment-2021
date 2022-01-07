@@ -1,4 +1,8 @@
+姓名：廖子逸
+学号：M202173487
 
-|学院|学号|姓名|
-|:--:|:--:|:--:|
-|武汉光电国家研究中心|M202173487|廖子逸|
+|论文标题|会议|年份|
+|:---:|:---:|:---:|
+|A Scalable Priority-Aware Approach to Managing Data Center Server Power|HPCA|2019|
+|Predictionbased power oversubscription in cloud platforms|USENIX ATC|2021|
+|Flex: High-Availability Datacenters With Zero Reserved Power|ISCA|2021|
